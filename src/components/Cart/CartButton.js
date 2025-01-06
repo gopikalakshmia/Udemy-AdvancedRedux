@@ -1,12 +1,11 @@
 import classes from './CartButton.module.css';
-import { cartAction } from '../../store';
+import { cartAction, showCartAction } from '../../store';
 import { useDispatch, useSelector } from 'react-redux';
 
 const CartButton = (props) => {
   const dispatch=useDispatch();
   const handleCartVisibility=()=>{
-    console.log("hello");
-    dispatch(cartAction.cartVisibility());
+    dispatch(showCartAction.cartVisibility());
   };
   return (
     <button className={classes.button}  onClick={handleCartVisibility}>
